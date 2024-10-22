@@ -1,4 +1,4 @@
-# 69. Sqrt
+# 69. Sqrt(x)
 ## 1. Đề bài
 `Link`: https://leetcode.com/problems/sqrtx/
 
@@ -39,7 +39,7 @@ right = x
         else:
             right = mid
 ```
-- Lặp lại quá trình trên cho đến khi ```left >= right```
+- Lặp lại quá trình trên cho đến khi ```left``` không lớn hơn ```right```
 ### 2.2. Một số lưu ý
 - Sử dụng `mid = left + (right - left) // 2` thay vì `mid = (left + right ) // 2`:
     + Nếu `left` và `right` đều là những giá trị rất lớn, phép tính `left + right` có thể vượt quá giới hạn của kiểu dữ liệu.

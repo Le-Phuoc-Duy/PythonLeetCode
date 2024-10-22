@@ -12,6 +12,7 @@ Example 1:
 - Explanation: There are two ways to climb to the top.
     + 1 step + 1 step
     + 2 steps
+
 Example 2 
 - Input: n = 3
 - Output: 3
@@ -21,11 +22,11 @@ Example 2
     + 2 steps + 1 step
 ## 2. Giải thích
 ### 2.1. Hướng giải quyết bài toán:
-- Gọi f(n) là một hàm số biểu thị số cách riêng biệt để leo lên đỉnh cầu thang có n bậc
-- Tại mỗi bậc n, ta có thể:
+- Gọi f(n) là một hàm số biểu thị số cách riêng biệt để leo lên đỉnh cầu thang có **n** bậc
+- Tại mỗi bậc **n**, ta có thể:
     + Đến từ bậc **n-1** (bằng cách leo 1 bậc)
     + Đến từ bậc **n-2** (bằng cách leo 2 bậc)
-- Do đó, số cách để đến bậc n là tổng của số cách đến bậc n-1 và bậc n-2. Điều này dẫn đến công thức truy hồi:
+- Do đó, số cách để đến bậc n là tổng của số cách đến bậc **n-1** và bậc **n-2**. Điều này dẫn đến công thức truy hồi:
 ```f(n) = f(n−1) + f(n−2)```
 
 ### 2.2. Khởi tạo giá trị ban đầu

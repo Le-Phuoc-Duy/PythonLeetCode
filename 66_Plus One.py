@@ -13,7 +13,3 @@ class Solution:
                 digits.insert(0,1)
             t = t - 1
         return digits
-    
-sol = Solution()
-d = [9,9,9]
-print (sol.plusOne(d))

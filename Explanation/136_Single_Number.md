@@ -29,8 +29,6 @@ Example 3:
 ```python
 return 2 * sum(set(nums)) - sum(nums)
 ```
-- Đoạn code trên cho độ phức tạp là O(n)
-
 ## 3. Kết quả (dựa trên leetcode)
 - Runtime:
     + 0 ms

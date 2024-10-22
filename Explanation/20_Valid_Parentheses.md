@@ -41,16 +41,19 @@ if s[0] in myDict.keys():
 ```
 - Nếu ký tự đầu tiên của chuỗi là một dấu ngoặc đóng, chuỗi đó không hợp lệ, vì một chuỗi hợp lệ phải bắt đầu bằng dấu ngoặc mở. Do đó, nếu điều kiện này đúng, hàm trả về `False`.
 ### 2.3. Sử dụng stack để kiểm tra
+- Cơ chế của stack là Last In, First Out (LIFO), phù hợp để giải quyết bài toán này, vì dấu ngoặc mở gần nhất phải được đóng trước. 
 ```python
 stack = []
-```
-- Cơ chế của stack là Last In, First Out (LIFO), phù hợp để giải quyết bài toán này, vì dấu ngoặc mở gần nhất phải được đóng trước. 
+``` 
+- Nếu ký tự hiện tại là một dấu ngoặc mở, ta thêm nó vào stack.
 ```python
 for i in s:
     if i in myDict.values():
         stack.append(i)
 ```
-- Nếu ký tự hiện tại là một dấu ngoặc mở, ta thêm nó vào stack.
+- Nếu ký tự hiện tại là một dấu ngoặc đóng, chương trình thực hiện các bước sau:
+    + Nếu stack rỗng (tức là không có dấu ngoặc mở nào trước đó), chuỗi không hợp lệ, trả về `False`.
+    + Nếu stack không rỗng, chương trình lấy phần tử cuối cùng của stack (dấu ngoặc mở gần nhất) so sánh với dấu ngoặc đóng hiện tại. Nếu không khớp, chuỗi không hợp lệ, trả về `False`.
 ```python
 else:
     if len(stack) == 0:
@@ -58,10 +61,10 @@ else:
     if stack.pop() != myDict[i]:
         return False
 ```
-- Nếu ký tự hiện tại là một dấu ngoặc đóng, chương trình thực hiện các bước sau:
-    + Nếu stack rỗng (tức là không có dấu ngoặc mở nào trước đó), chuỗi không hợp lệ, trả về `False`.
-    + Nếu stack không rỗng, chương trình lấy phần tử cuối cùng của stack (dấu ngoặc mở gần nhất) so sánh với dấu ngoặc đóng hiện tại. Nếu không khớp, chuỗi không hợp lệ, trả về `False`.
-- Sau khi duyệt hết chuỗi, nếu stack rỗng, tức là tất cả các dấu ngoặc mở đều đã được đóng đúng cách, chuỗi hợp lệ và hàm trả về `True`. Nếu stack còn phần tử, chuỗi không hợp lệ và trả về `False`.
+- Sau khi duyệt hết chuỗi, nếu stack rỗng, tức là tất cả các dấu ngoặc mở đều đã được đóng đúng cách, hàm trả về `True`. Nếu stack còn phần tử, chuỗi không hợp lệ và trả về `False`.
+```python
+return len(stack) == 0 
+```
 ## 3. Kết quả (dựa trên leetcode)
 - Runtime:
     + 0 ms

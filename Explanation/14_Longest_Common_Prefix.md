@@ -16,9 +16,9 @@ Example 2:
 - Explanation: There is no common prefix among the input strings.
 ## 2. Giải thích 
 ### 2.1. Hướng giải quyết bài toán
-- Để xác định tiền tố chung dài nhất giữa một tập hợp các chuỗi, chúng ta cần tìm chuỗi ngắn nhất trong danh sách các chuỗi. Điều này là vì không thể có một tiền tố chung nào dài hơn chuỗi ngắn nhất.
+- Để xác định tiền tố chung dài nhất giữa một tập hợp các chuỗi, chúng ta cần kiểm tra chuỗi ngắn nhất trong danh sách các chuỗi. Điều này là vì không thể có một tiền tố chung nào dài hơn chuỗi ngắn nhất.
 - Sử dụng một vòng lặp để kiểm tra từng chuỗi từ danh sách xem chuỗi ngắn nhất có phải là tiền tố chung hay không. Nếu chuỗi ngắn nhất không phải là tiền tố chung, giảm độ dài của chuỗi ngắn nhất bằng cách loại bỏ ký tự cuối cùng và tiếp tục kiểm tra cho đến khi tìm thấy một tiền tố chung hoặc chuỗi ngắn nhất trở thành chuỗi rỗng.
-### 2.2. Xác định chuỗi ngẵn nhất
+### 2.2. Xác định chuỗi ngắn nhất
 ```python
 shortest = strs[0]
 for s in strs:
@@ -31,7 +31,7 @@ for s in strs:
 while(len(shortest)>=0):
     flag = True 
     for s in strs:
-        if not(s.find(shortest) == 0):
+        if s.find(shortest) != 0:
             flag = False
             break
     if flag:

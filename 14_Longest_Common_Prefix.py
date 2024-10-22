@@ -9,7 +9,7 @@ class Solution:
         while(len(shortest)>=0):
             flag = True 
             for s in strs:
-                if not(s.find(shortest) == 0):
+                if s.find(shortest) != 0:
                     flag = False
                     break
             if flag:

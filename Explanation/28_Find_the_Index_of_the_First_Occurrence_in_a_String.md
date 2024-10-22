@@ -14,11 +14,11 @@ Example 2:
 - Input: haystack = "leetcode", needle = "leeto"
 - Output: -1
 - Explanation: "leeto" did not occur in "leetcode", so we return -1.
-## 2. Giải thích 
+## 2. Giải thích  
+- Hàm `find` là một phương thức được sử dụng để tìm kiếm một chuỗi con (substring) trong một chuỗi lớn hơn và trả về chỉ số (index) của lần xuất hiện đầu tiên của chuỗi con đó. Nếu chuỗi con không được tìm thấy, hàm trả về -1. 
 ```python
 return haystack.find(needle)
 ```
-- Hàm `find` là một phương thức được sử dụng để tìm kiếm một chuỗi con (substring) trong một chuỗi lớn hơn và trả về chỉ số (index) của lần xuất hiện đầu tiên của chuỗi con đó. Nếu chuỗi con không được tìm thấy, hàm trả về -1. 
 ## 3. Kết quả (dựa trên leetcode)
 - Runtime:
     + 0 ms

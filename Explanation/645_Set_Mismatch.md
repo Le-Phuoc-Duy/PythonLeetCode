@@ -41,11 +41,11 @@ for idx, num in enumerate(nums):
 - Duyệt qua mảng `nums` với chỉ số i và giá trị num:
     + Nếu num đã xuất hiện trong `visited`, gán `num` cho `repetitionNumber`
     + Nếu num chưa xuất hiện hoặc điều kiện không thỏa mãn, cập nhật `visited[num] = idx`.
+- Tính toán lossNumber 
 ```python
 n = len(nums)
 lossNumber = n*(n+1)//2 -sum(nums) + repetitionNumber
 ```
-- Tính toán lossNumber 
 ### 2.3. Tại sao lại sử dụng dictionary?
 - Khi sử dụng list, câu lệnh ```num in visited``` có độ phức tạp O(n) do phải duyệt qua toàn bộ danh sách. Điều này không phù hợp cho bài toán cần tối ưu.
 - Trong khi đó, Dictionary giúp tra cứu xem một phần tử đã tồn tại trong mảng trước đó hay chưa với độ phức tạp là O(1).
